@@ -1,27 +1,83 @@
-# EquinorteFacturaApp
+# equinorte-factura-app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+Frontend de la prueba técnica para Equinorte.
+Construido con **Angular 17 + PrimeNG**.
 
-## Development server
+> Backend: https://github.com/brayantorre3/equinorte-factura-api
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 17
+- PrimeNG 17
+- TypeScript
+- SCSS
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Requisitos previos
 
-## Running unit tests
+- Node.js 18+
+- npm
+- Angular CLI 17
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+> El backend debe estar corriendo en `http://localhost:8080` antes de iniciar el frontend.
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Instalación y ejecución
 
-## Further help
+```bash
+git clone https://github.com/brayantorre3/equinorte-factura-app.git
+cd equinorte-factura-app
+npm install
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+La aplicación abre en: `http://localhost:4200`
+
+---
+
+## Funcionalidades
+
+- **Listado de facturas** — tabla con todas las facturas registradas
+- **Detalle de factura** — vista con los productos y valores actuales
+- **Recálculo proporcional** — formulario para ingresar nuevo subtotal y tipo de usuario
+- **Validaciones** — mensajes de error según las reglas de negocio (Tipo A / Tipo B)
+- **Notificaciones toast** — confirmación visual del resultado del recálculo
+
+---
+
+## Estructura del proyecto
+
+```
+src/app/
+├── components/
+│   └── factura/
+│       ├── factura.component.ts
+│       ├── factura.component.html
+│       └── factura.component.scss
+├── services/
+│   └── factura.service.ts
+├── app.routes.ts
+└── app.config.ts
+```
+
+---
+
+## Conexión con el backend
+
+La URL base de la API está configurada en `factura.service.ts`:
+
+```typescript
+private apiUrl = 'http://localhost:8080/api/facturas';
+```
+
+Si el backend corre en un puerto diferente, actualiza esta línea.
+
+---
+
+## Autor
+
+**Brayan Torres** — [@brayantorre3](https://github.com/brayantorre3)
