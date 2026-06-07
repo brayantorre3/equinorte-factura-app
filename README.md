@@ -78,6 +78,19 @@ Si el backend corre en un puerto diferente, actualiza esta línea.
 
 ---
 
+## Docker
+
+Para correr el frontend con Docker de forma independiente:
+
+```bash
+docker build -t equinorte-frontend .
+docker run -p 80:80 equinorte-frontend
+```
+
+> Se recomienda usar el `docker-compose` del repositorio del backend para levantar ambos servicios juntos.
+
+---
+
 ## Autor
 
 **Brayan Torres** — [@brayantorre3](https://github.com/brayantorre3)
